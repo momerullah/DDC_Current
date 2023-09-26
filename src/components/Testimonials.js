@@ -23,8 +23,18 @@ const Testimonials = () => {
                     ★★★★★
                 </div>
             </div>
+            <div className="testimonial">
+                <div className="testimonial-textbox">
+                    <p>"Deccan Delights ki Haleem poore Chicago me nai milti."</p>
+                    <span className="author">- Taqi</span>
+                </div>
+                <div className="stars">
+                    ★★★★★
+                </div>
+            </div>
         </section>
     );
 };
+
 
 export default Testimonials;

@@ -1,0 +1,10 @@
+body {
+    background-image: url('/Charminar.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    min-height: 100vh;
+    margin: 0;
+  }
+  

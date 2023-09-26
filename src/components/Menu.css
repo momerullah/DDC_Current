@@ -1,0 +1,128 @@
+.menu-wrapper {
+    background-color: #f8f4dc;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.menu {
+    background-color: black;
+    color: #d4af37;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.menu-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px; /* Updated the margin-bottom for more space between each menu item */
+    padding: 0 30%;
+}
+
+.menu-image {
+    width: 40%;
+    order: 3;
+}
+
+.menu-text, .menu-table {
+    width: 70%;
+    text-align: center;
+}
+
+.menu-text {
+    order: 1;
+}
+
+.menu-table {
+    order: 4;
+}
+
+.menu-section:nth-child(even) .menu-image {
+    order: 3;
+}
+
+.menu-section:nth-child(even) .menu-text {
+    order: 1;
+}
+
+.menu-section:nth-child(even) .menu-table {
+    order: 4;
+}
+
+.fancy-underline {
+    position: relative;
+    font-size: 1.5em;
+}
+
+.fancy-underline::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #d4af37;
+}
+
+.italic-description {
+    font-style: italic;
+}
+
+.menu-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.menu-table, .menu-table th, .menu-table td {
+    border: 2px solid #d4af37;
+}
+
+.menu-table th {
+    background-color: #333333;
+    color: #d4af37;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu-table td {
+    background-color: #1a1a1a;
+    color: #d4af37;
+    padding: 8px;
+    text-align: center;
+}
+
+/* ... Existing CSS ... */
+
+@media (max-width: 767px) {
+    .menu-section {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .menu-text, .menu-image, .menu-table {
+        width: 100%;
+    }
+
+    .menu-section:nth-child(odd) .menu-image,
+    .menu-section:nth-child(even) .menu-image {
+        order: 2;
+    }
+
+    .menu-section:nth-child(odd) .menu-text,
+    .menu-section:nth-child(even) .menu-text {
+        order: 1;
+    }
+
+    .menu-section:nth-child(odd) .menu-table,
+    .menu-section:nth-child(even) .menu-table {
+        order: 3;
+    }
+}
+

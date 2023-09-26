@@ -1,0 +1,66 @@
+/* Styling for Ordering Section */
+.ordering-section {
+    background-color: #f8f4dc; /* Whitish/Beige Background */
+    padding: 1px;
+    text-align: center;
+}
+
+.ordering-section h2 {
+    color: #daa520; /* Golden Text Color */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.ordering-section p, .ordering-section ul {
+    color: #333; /* Dark Text Color */
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.ordering-section a {
+    color: #daa520; /* Golden Text Color for Links */
+    text-decoration: none;
+}
+
+.ordering-section a:hover {
+    text-decoration: underline;
+}
+
+.ordering-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ordering-section li {
+    margin-bottom: 10px;
+}
+
+.note {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* ... Other Styles ... */
+
+/* ... Other Styles ... */
+
+.ordering-section h2 {
+    position: relative;
+    display: inline-block; /* Makes the h2 width only as wide as the text */
+}
+
+.ordering-section h2:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10px; /* Adjust as needed */
+    left: 0;
+    height: 20px; /* Adjust as needed */
+    width: 100%;
+    background: linear-gradient(45deg, #EF8B17 25%, transparent 25%) 0 0, 
+                linear-gradient(45deg, #EF8B17 25%, transparent 25%) 14px 0, 
+                linear-gradient(-45deg, #EF8B17 25%, transparent 25%) 0 0, 
+                linear-gradient(-45deg, #EF8B17 25%, transparent 25%) 14px 0;
+    background-size: 21px 21px;
+    background-color: transparent;
+}

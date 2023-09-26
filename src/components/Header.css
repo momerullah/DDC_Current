@@ -1,0 +1,98 @@
+.header-section {
+    background-image: url('/Charminar.jpeg');
+    background-size: 100%;
+    background-position: center 65%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    color: white;
+    z-index: 1;
+}
+
+
+@media (max-width: 767px) {
+    .header-section {
+        background-size: 160%;
+        background-position: bottom center;
+        background-attachment: scroll;
+        background-color: black;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    #logo {
+        height: 75px;
+        width: 75px;
+    }
+}
+
+.custom-navbar {
+    background-color: black !important;
+}
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+}
+
+.center-logo-quote {
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+}
+
+.center-logo-img {
+    width: 150px;
+    height: 150px;
+}
+
+.quote {
+    margin-top: 20px;
+    font-style: italic;
+    font-weight: bold;
+    color: #daa520;
+}
+.custom-nav-link {
+    color: #daa520 !important; /* !important is used to override the Bootstrap styles */
+}
+
+
+/* Below are the additional styles that were present in your original CSS, 
+   you might want to review and merge them as per your needs */
+
+.navbar-custom {
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    
+}
+
+
+.navbar-custom .navbar-nav .nav-link {
+    color: #daa520; 
+    margin-right: 20px; 
+}
+
+.navbar-custom .navbar-brand {
+    margin-left: auto; 
+    padding-right: 10px; 
+}
+
+.navbar-custom .navbar-toggler {
+    border: none;
+    padding-right: 20px;
+}
+
+.navbar-custom .navbar-toggler-icon {
+    background-color: #daa520;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(218, 165, 32, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+@media (max-width: 767px) {
+    .navbar-custom {
+        height: 60px;
+    }
+}

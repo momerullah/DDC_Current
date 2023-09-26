@@ -1,0 +1,83 @@
+/* Styling for Testimonials Section */
+.testimonials-section {
+    background-color: #f8f4dc; /* Whitish/Beige Background */
+    padding: 1px;
+    text-align: center;
+    
+}
+
+.testimonials-section h2 {
+    color: #daa520; /* Golden Text Color */
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.testimonial {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the items */
+    margin-bottom: 20px;
+}
+
+.testimonial-textbox {
+    background-color: #fff; /* White Background for Textbox */
+    color: #333; /* Dark Text Color */
+    padding: 10px;
+    border: 5px solid #000000; /* Border Color */
+    border-radius: 15px; /* Optional: for rounded corners */
+    width: 15%; /* Adjusted Width */
+    margin-right: -150px; /* Space between text box and stars */
+}
+
+.testimonial p {
+    margin-bottom: 10px;
+}
+
+.author {
+    font-weight: bold;
+}
+
+.stars {
+    color: #daa520; /* Golden Color for Stars */
+    font-size: 2em; /* Larger Font Size for Stars */
+    width: 20%; /* Adjusted Width */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black Outline */
+}
+
+/* ... Other Styles ... */
+
+/* Mobile View Optimization */
+@media (max-width: 768px) {
+    .testimonial {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center-align the stacked elements */
+    }
+
+    .testimonial-textbox, .stars {
+        width: 100%; /* Take the full width */
+        margin-right: 0; /* Remove the margin between text box and stars */
+        margin-bottom: 10px; /* Add some space between stacked elements */
+    }
+}
+/* ... Other Styles ... */
+
+.testimonials-section h2 {
+    position: relative;
+    display: inline-block; /* Makes the h2 width only as wide as the text */
+}
+
+.testimonials-section h2:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10px; /* Adjust as needed */
+    left: 0;
+    height: 20px; /* Adjust as needed */
+    width: 100%;
+    background: linear-gradient(45deg, #EF8B17 25%, transparent 25%) 0 0, 
+                linear-gradient(45deg, #EF8B17 25%, transparent 25%) 14px 0, 
+                linear-gradient(-45deg, #EF8B17 25%, transparent 25%) 0 0, 
+                linear-gradient(-45deg, #EF8B17 25%, transparent 25%) 14px 0;
+    background-size: 21px 21px;
+    background-color: transparent;
+}

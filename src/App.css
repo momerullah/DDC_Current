@@ -1,0 +1,71 @@
+.App {
+  text-align: center;
+}
+
+/* ... (other styles) ... */
+.header-section {
+  background-image: url('/Charminar.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  color: white;
+}
+/* ... (other styles) ... */
+
+
+.other-sections {
+  background-color: #f5f5dc; /* Beige background */
+  padding: 20px;
+}
+* {
+  padding: 0;
+}
+
+
+/* Common Styling for Info Sections */
+.info-section {
+  background-color: #f8f4dc; /* Whitish/Beige Background */
+  padding: 20px;
+  text-align: center;
+}
+
+.info-section h2 {
+  color: #daa520; /* Golden Text Color */
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.info-section p, .info-section ul {
+  color: #333; /* Dark Text Color */
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.info-section a {
+  color: #daa520; /* Golden Text Color for Links */
+  text-decoration: none;
+}
+
+.info-section a:hover {
+  text-decoration: underline;
+}
+
+.info-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-section li {
+  margin-bottom: 10px;
+}
+
+.note {
+  font-style: italic;
+  margin-top: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

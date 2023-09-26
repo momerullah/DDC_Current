@@ -1,0 +1,51 @@
+/* Styling for Contact Section */
+/* Adjusting the padding and background color for Ordering Section */
+/* Adjusting the margin and/or padding for Contact Section */
+.contact-section {
+    margin: 0; /* Adjust as needed */
+    padding: 1px; /* Adjust as needed */
+    text-align: center;
+}
+
+.contact-section h2 {
+    color: #daa520; /* Golden Text Color */
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    color: #333; /* Dark Text Color */
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.contact-section a {
+    color: #daa520; /* Golden Text Color for Links */
+    text-decoration: none;
+}
+
+.contact-section a:hover {
+    text-decoration: underline;
+}
+/* ... Other Styles ... */
+
+.contact-section h2 {
+    position: relative;
+    display: inline-block; /* Makes the h2 width only as wide as the text */
+}
+
+.contact-section h2:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -10px; /* Adjust as needed */
+    left: 0;
+    height: 20px; /* Adjust as needed */
+    width: 100%;
+    background: linear-gradient(45deg, #EF8B17 25%, transparent 25%) 0 0, 
+                linear-gradient(45deg, #EF8B17 25%, transparent 25%) 14px 0, 
+                linear-gradient(-45deg, #EF8B17 25%, transparent 25%) 0 0, 
+                linear-gradient(-45deg, #EF8B17 25%, transparent 25%) 14px 0;
+    background-size: 21px 21px;
+    background-color: transparent;
+}

@@ -1,25 +1,84 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Menu.css";
-import "./General.css";  // Ensure this path is correct for the underline removal
+import "./General.css";
+import { useInView } from "react-intersection-observer";
 
 const Menu = () => {
-  return  (
+    const [isBiryaniVisible, setBiryaniVisible] = useState(false);
+    const [biryaniRef, biryaniInView, biryaniEntry] = useInView({
+      threshold: 0.2,
+    });
+  
+    useEffect(() => {
+      if (biryaniEntry && biryaniEntry.isIntersecting) {
+        setBiryaniVisible(true);
+      } else {
+        setBiryaniVisible(false);
+      }
+    }, [biryaniEntry]);
+
+  // Haleem Section
+  const [isHaleemVisible, setHaleemVisible] = useState(false);
+  const [haleemRef, haleemInView, haleemEntry] = useInView({
+    threshold: 0.2,
+  });
+
+  useEffect(() => {
+    if (haleemEntry && haleemEntry.isIntersecting) {
+      setHaleemVisible(true);
+    } else {
+      setHaleemVisible(false);
+    }
+  }, [haleemEntry]);
+
+  // Gravies Section
+  const [isGraviesVisible, setGraviesVisible] = useState(false);
+  const [graviesRef, graviesInView, graviesEntry] = useInView({
+    threshold: 0.2,
+  });
+
+  useEffect(() => {
+    if (graviesEntry && graviesEntry.isIntersecting) {
+      setGraviesVisible(true);
+    } else {
+      setGraviesVisible(false);
+    }
+  }, [graviesEntry]);
+
+  // Desserts and Salads Section
+  const [isDessertsVisible, setDessertsVisible] = useState(false);
+  const [dessertsRef, dessertsInView, dessertsEntry] = useInView({
+    threshold: 0.2,
+  });
+
+  useEffect(() => {
+    if (dessertsEntry && dessertsEntry.isIntersecting) {
+      setDessertsVisible(true);
+    } else {
+      setDessertsVisible(false);
+    }
+  }, [dessertsEntry]);
+
+  return (
     <div className="menu-wrapper">
       <div className="menu">
         <h1 className="underline">Menu</h1>
 
         {/* Biriyani Section */}
-        <div className="menu-section">
-  <div className="menu-content left">
-    <div className="menu-text">
-      <h2 className="underline">Biriyani</h2>
-      <p className="italic-description">
-        "A flavorful and aromatic rice dish made with aromatic spices and meat."
-      </p>
-    </div>
-    <img src={"/Biriyani.jpg"} alt="Biriyani" className="menu-image" />
-  </div>
-  <table className="menu-table right">
+        <div
+          className={`menu-section ${isBiryaniVisible ? "visible" : ""}`}
+          ref={biryaniRef}
+        >
+          <div className="menu-content left">
+            <div className="menu-text">
+              <h2 className="underline">Biriyani</h2>
+              <p className="italic-description">
+                "A flavorful and aromatic rice dish made with aromatic spices and meat."
+              </p>
+            </div>
+            <img src={"/Biriyani.jpg"} alt="Biriyani" className="menu-image" />
+          </div>
+          <table className="menu-table right">
             <thead>
               <tr>
                 <th>MENU</th>
@@ -71,19 +130,21 @@ const Menu = () => {
           </table>
         </div>
 
-{/* Haleem Section */}
-<div className="menu-section">
-  <div className="menu-content right">
-    <div className="menu-text">
-      <h2 className="underline">Haleem and Others</h2>
-      <p className="italic-description">
-        "A rich and hearty stew made with meat, lentils, and spices,
-         slow-cooked to perfection."
-      </p>
-    </div>
-    <img src={"/Haleem.jpg"} alt="Haleem" className="menu-image" />
-  </div>
-  <table className="menu-table left">
+        {/* Haleem Section */}
+        <div
+          className={`menu-section ${isHaleemVisible ? "visible" : ""}`}
+          ref={haleemRef}
+        >
+          <div className="menu-content right">
+            <div className="menu-text">
+              <h2 className="underline">Haleem and Others</h2>
+              <p className="italic-description">
+                "A rich and hearty stew made with meat, lentils, and spices, slow-cooked to perfection."
+              </p>
+            </div>
+            <img src={"/Haleem.jpg"} alt="Haleem" className="menu-image" />
+          </div>
+          <table className="menu-table left">
             <thead>
               <tr>
                 <th>MENU</th>
@@ -127,24 +188,21 @@ const Menu = () => {
           </table>
         </div>
 
-
-{/* Gravies Section */}
-<div className="menu-section">
-    <div className="menu-content left">
-        <div className="menu-text">
-            <h2 className="underline">Gravies</h2>
-            <p className="italic-description">
-                "A variety of rich and flavorful gravies made with fresh
-                ingredients and aromatic spices."
-            </p>
-        </div>
-        <img
-            src={"/Gravies.jpg"}
-            alt="Gravies"
-            className="menu-image"
-        />
-    </div>
-    <table className="menu-table right">
+        {/* Gravies Section */}
+        <div
+          className={`menu-section ${isGraviesVisible ? "visible" : ""}`}
+          ref={graviesRef}
+        >
+          <div className="menu-content left">
+            <div className="menu-text">
+              <h2 className="underline">Gravies</h2>
+              <p className="italic-description">
+                "A variety of rich and flavorful gravies made with fresh ingredients and aromatic spices."
+              </p>
+            </div>
+            <img src={"/Gravies.jpg"} alt="Gravies" className="menu-image" />
+          </div>
+          <table className="menu-table right">
             <thead>
               <tr>
                 <th>MENU</th>
@@ -200,23 +258,21 @@ const Menu = () => {
           </table>
         </div>
 
-      
-{/* Desserts and Salads Section */}
-<div className="menu-section">
-    <div className="menu-content right">
-        <div className="menu-text">
-            <h2 className="underline">Desserts and Salads</h2>
-            <p className="italic-description">
+        {/* Desserts and Salads Section */}
+        <div
+          className={`menu-section ${isDessertsVisible ? "visible" : ""}`}
+          ref={dessertsRef}
+        >
+          <div className="menu-content right">
+            <div className="menu-text">
+              <h2 className="underline">Desserts and Salads</h2>
+              <p className="italic-description">
                 "Delicious and traditional desserts along with refreshing salads."
-            </p>
-        </div>
-        <img
-            src={"/Desserts.jpg"}
-            alt="Desserts"
-            className="menu-image"
-        />
-    </div>
-    <table className="menu-table left">
+              </p>
+            </div>
+            <img src={"/Desserts.jpg"} alt="Desserts" className="menu-image" />
+          </div>
+          <table className="menu-table left">
             <thead>
               <tr>
                 <th>MENU</th>

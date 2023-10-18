@@ -4,6 +4,7 @@
     font-family: Arial, sans-serif;
 }
 
+
 .menu {
     max-width: 1200px;
     margin: 0 auto;
@@ -19,9 +20,9 @@
     font-weight: bold;
     color: #2a2a2a;
     font-size: 1.2rem;
-    background-color: #f3e5ab;  /* Light golden background for the section titles */
+    background-color: #f3e5ab; /* Light golden background for the section titles */
     padding: 0.8rem 0;
-    border-bottom: 3px solid #000;  /* Dark black line under section titles */
+    border-bottom: 3px solid #000; /* Dark black line under section titles */
 }
 
 .section-divider td {
@@ -36,6 +37,7 @@
     padding-top: 1.2rem; /* Additional padding for visual separation */
     border-top: 1px solid #d4af37; /* Golden line above standalone dishes */
 }
+
 .menu-section {
     display: flex;
     flex-wrap: wrap;
@@ -44,11 +46,23 @@
     margin-bottom: 2rem;
     padding: 1rem 0;
     border-bottom: 1px solid #e0e0e0;
+    opacity: 0;
+    transform: translateY(50px); /* Adjust this value if needed */
+    transition: all 0.5s ease-in-out;
+    flex-direction: row; /* Make sure this is set to row */
+
+}
+
+.menu-section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .menu-section:last-child {
     border-bottom: none;
 }
+
+
 
 .menu-image {
     width: 250px;
@@ -60,6 +74,7 @@
     border: 2px solid black; /* Golden border to match your table styling */
     transition: border-color 0.3s ease-in-out; /* Smooth transition for hover effects */
 }
+
 .menu-image:hover {
     border-color: gold; /* Darker border on hover for a subtle effect */
 }
@@ -84,8 +99,8 @@
 }
 
 .menu-table th {
-    background-color: #2a2a2a; 
-    color: #d4af37;  /* Golden text */
+    background-color: #2a2a2a;
+    color: #d4af37; /* Golden text */
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -105,13 +120,14 @@
     font-style: italic;
     margin-top: 0.5rem;
 }
+
 .menu-content {
     display: flex;
     flex-direction: column; /* To stack text and image vertically */
-    align-items: center;   /* To center-align text and image */
-    flex: 1;               /* To give it equal width as menu-table */
-  }
-  
+    align-items: center; /* To center-align text and image */
+    flex: 1; /* To give it equal width as menu-table */
+}
+
 
 .left {
     order: 1;
@@ -119,6 +135,31 @@
 
 .right {
     order: 2;
+}
+
+.menu-table tbody tr {
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.menu-table tbody tr:hover {
+    background-color: gold;
+    transform: scale(1.02);
+}
+/* For Mobile View */
+@media (max-width: 768px) { /* Assuming 768px is the breakpoint for mobile */
+    .menu-section {
+        flex-direction: column; /* Stack them vertically */
+    }
+    
+    .left, .right {
+        order: 0; /* This ensures that the .menu-content (whether .left or .right) always appears above the table on mobile */
+    }
+
+    /* Adjustments for the menu content and table layout on mobile */
+    .menu-content, .menu-table {
+        margin: 0 auto; /* Center the content and table */
+        max-width: 90%; /* Limit the width to 90% of the screen width */
+    }
 }
 
 /* Adjust logo size for smaller devices */
@@ -129,7 +170,7 @@
     }
 
     .center-logo-quote {
-        top: 25%; 
+        top: 25%;
         left: 50%;
         transform: translate(-50%, -25%);
     }
@@ -149,7 +190,7 @@
 /* Specific adjustments for iPhone SE 2 */
 @media screen and (max-width: 375px) {
     .center-logo-quote {
-        top: 50%; 
+        top: 50%;
         transform: translate(-50%, -50%);
     }
 

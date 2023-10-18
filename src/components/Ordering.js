@@ -1,10 +1,11 @@
 import React from 'react';
-import './Ordering.css'; // Importing the CSS file for Ordering component, create one if doesn't exist
+import './Ordering.css';
+import './General.css';  // Import General.css
 
 const Ordering = () => {
     return (
         <section id="ordering" className="info-section">
-            <div className="ordering-section">
+            <div className="inner-section">
                 <h2>How to Order</h2>
                 <p>To place your order, please call: <a href="tel:630-426-7001">630-426-7001</a></p>
                 <p className="note"><strong>Note:</strong> All orders should be placed on or before Thursdays. Pick up is on weekends from Aurora IL.</p>

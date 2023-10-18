@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';  
 import React from 'react';
 import {Nav, Navbar, Container} from 'react-bootstrap';
+import { Link } from 'react-scroll';  // Added this line
 import './Header.css';
 
 function Header() {  
@@ -15,10 +16,50 @@ function Header() {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto">
-                                <Nav.Link className="custom-nav-link" Item href="#menu">Menu</Nav.Link>
-                                <Nav.Link className="custom-nav-link" href="#ordering">Ordering</Nav.Link>
-                                <Nav.Link className="custom-nav-link" href="#contact">Contact</Nav.Link>
-                                <Nav.Link className="custom-nav-link" href="#testimonials">Testimonials</Nav.Link>
+                                <Link 
+                                    activeClass="active"
+                                    to="menu"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                    className="custom-nav-link nav-link"
+                                >
+                                    Menu
+                                </Link>
+                                <Link 
+                                    activeClass="active"
+                                    to="ordering"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                    className="custom-nav-link nav-link"
+                                >
+                                    Ordering
+                                </Link>
+                                <Link 
+                                    activeClass="active"
+                                    to="contact"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                    className="custom-nav-link nav-link"
+                                >
+                                    Contact
+                                </Link>
+                                <Link 
+                                    activeClass="active"
+                                    to="testimonials"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-70}
+                                    duration={500}
+                                    className="custom-nav-link nav-link"
+                                >
+                                    Testimonials
+                                </Link>
                             </Nav>
                         </Navbar.Collapse>
                     </Container>

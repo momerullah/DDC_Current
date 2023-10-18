@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, animateScroll as scroll } from 'react-scroll';
 import './App.css';
 import Header from './components/Header'; // Adjust path if needed
 import Menu from './components/Menu'; // Adjust path if needed

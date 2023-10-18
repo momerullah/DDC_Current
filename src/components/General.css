@@ -24,6 +24,18 @@
 
 .inner-section h2:after {
     content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    width: 60px;
+    height: 3px;
+    background-color: #daa520;
+}
+
+
+/* .inner-section h2:after {
+    content: '';
     display: block;
     position: absolute;
     bottom: -10px;
@@ -36,7 +48,7 @@
                 linear-gradient(-45deg, #EF8B17 25%, transparent 25%) 14px 0;
     background-size: 21px 21px;
     background-color: transparent;
-}
+} */
 /* Cleaner Underline for Section Headings */
 
 .underline {

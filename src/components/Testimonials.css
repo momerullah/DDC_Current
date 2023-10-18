@@ -58,20 +58,6 @@
     padding-bottom: 10px; /* Space for the underline */
 }
 
-/* Underline Style */
-.testimonial-heading::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%); /* Centering the underline */
-    width: 100px; /* Width of the underline */
-    height: 3px;
-    background-color: #daa520; /* Color of the underline */
-}
-
-/* ...Remaining Testimonials Styles */
-
 /* Media Queries */
 @media (max-width: 768px) {
     .testimonial {

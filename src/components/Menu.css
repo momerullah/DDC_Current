@@ -12,6 +12,7 @@
     border-radius: 8px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
+
 /* ... Existing styles ... */
 
 .section-title td {
@@ -35,8 +36,6 @@
     padding-top: 1.2rem; /* Additional padding for visual separation */
     border-top: 1px solid #d4af37; /* Golden line above standalone dishes */
 }
-
-
 .menu-section {
     display: flex;
     flex-wrap: wrap;
@@ -58,6 +57,11 @@
     margin: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid black; /* Golden border to match your table styling */
+    transition: border-color 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+.menu-image:hover {
+    border-color: gold; /* Darker border on hover for a subtle effect */
 }
 
 .menu-text {
@@ -65,7 +69,6 @@
     padding: 1rem;
 }
 
-/* Updated Table Styles */
 .menu-table {
     flex: 2;
     width: 100%;
@@ -102,6 +105,13 @@
     font-style: italic;
     margin-top: 0.5rem;
 }
+.menu-content {
+    display: flex;
+    flex-direction: column; /* To stack text and image vertically */
+    align-items: center;   /* To center-align text and image */
+    flex: 1;               /* To give it equal width as menu-table */
+  }
+  
 
 .left {
     order: 1;
@@ -111,18 +121,55 @@
     order: 2;
 }
 
+/* Adjust logo size for smaller devices */
+@media screen and (max-width: 575px) {
+    #logo {
+        height: 50px;
+        width: 50px;
+    }
 
-@media (max-width: 768px) {
-    .menu-section {
-        flex-direction: column;
+    .center-logo-quote {
+        top: 25%; 
+        left: 50%;
+        transform: translate(-50%, -25%);
     }
-    
-    .menu-text, .menu-table {
-        order: 2;
+
+    .center-logo-img {
+        width: 100px;
+        height: 100px;
     }
-    
-    .menu-image {
-        order: 1;
-        max-width: 100%;
+
+    .quote {
+        font-size: 14px;
+        margin-top: 10px;
+        padding: 0 15px; /* To ensure text doesn't touch screen edges */
+    }
+}
+
+/* Specific adjustments for iPhone SE 2 */
+@media screen and (max-width: 375px) {
+    .center-logo-quote {
+        top: 50%; 
+        transform: translate(-50%, -50%);
+    }
+
+    .quote {
+        font-size: 12px;
+    }
+}
+
+/* Navbar adjustments */
+@media (max-width: 767px) {
+    .custom-navbar {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .navbar-custom {
+        height: auto;
+    }
+
+    .navbar-toggler {
+        padding-right: 10px;
     }
 }
